@@ -1,0 +1,30 @@
+
+<div class="card project">
+    <div class="card-image">
+        <figure class="image is-4by3">
+        <img [src]="project.imgageUrl" alt="Project image">
+        </figure>
+    </div>
+    <div class="card-content">
+    
+        <div class="content">
+            <div class="description">
+                <div class="info">
+                    <p class="title is-4 link-project" (click)="openProject(project.projectLink)">{{project.projectName}}</p>
+                    <p class="subtitle is-6">@{{project.mainLanguage}}</p>
+                    {{project.projectDescription}}<br>
+                    <div>
+                        <p class="title is-6" style="margin: 15px 0px;">STACK</p>
+                        <ul class="tech-stack">
+                            <li *ngFor="let tech of project.techsList">{{tech}}</li>
+                        </ul>
+                    </div>
+                    
+                </div>
+                
+            </div>
+            <br>
+            <time>{{project.projectDuration}}</time>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,130 @@
+.container {
+
+    justify-content: center;
+    justify-self: center;
+    align-self: center;
+
+    .card {
+        box-shadow: 0 0.3em 0.5em -0.1em #ccc, 0 0 0 0.3px #ccc;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        flex-direction: column;
+        margin: auto;
+        max-width: 420px;
+        transition: all 0.5s linear;
+        background-image: url('../../assets/images/fondo-hacker1.png');
+        background-position: -15px;
+        background-repeat: no-repeat;
+        background-size: cover;
+    
+        img {
+            border-color: white;
+            background-color:transparent;
+            border-width: 1px;
+            border-style: none;
+            box-shadow: 0 10px 30px #ccc;
+            width: 0px;
+            height: 270px;
+            border-radius: 100%; 
+            transition: all 350ms ease, width 500ms ease-out;
+            
+            &:hover {
+                transform: scale(1.05);
+            }
+        }
+    
+    
+        .social-contact {
+            position: relative;
+            width: 100%;
+            background-color: transparent;
+            padding: 10px;
+            display: block;
+            top: 145px;
+            transition: all 550ms ease-in;
+
+            h3 {
+                color: white;
+            }
+
+            .social-icons {
+                padding: 0;
+                list-style: none;
+                margin: 1em;
+
+                li {
+                    display: inline-block;
+                    margin: 0.15em;
+                    position: relative;
+                    font-size: 1em;
+                    a {
+                        display: inline-block;
+                        &:before {
+                            transform: scale(1);
+                            -ms-transform: scale(1);
+                            -webkit-transform: scale(1);
+                            content: " ";
+                            width: 45px;
+                            height: 45px;
+                            border-radius: 100%;
+                            display: block;
+                            background: linear-gradient(30deg, #eee, #fff);
+                            transition: all 265ms ease-out;
+                        }
+
+                        &:hover:before {
+                            transform: scale(0);
+                            transition: all 265ms ease-in;
+                        }
+
+                        &:hover i {
+                            transform: scale(2.2);
+                            -ms-transform: scale(2.2);
+                            -webkit-transform: scale(2.2);
+                            color: #eee;
+                            background: -webkit-linear-gradient(30deg, #eee, #fff);
+                            background-clip: text;
+                            -webkit-background-clip: text;
+                            -webkit-text-fill-color: transparent;
+                            transition: all 265ms ease-in;
+                        }
+
+                        
+
+                        i {
+                            position: absolute;
+                            top: 0.95em;
+                            left: 0.96em;
+                            transition: all 265ms ease-out;
+                            
+
+                        }
+                    }
+
+                    
+                }
+            }
+        }  
+    
+        &:hover {
+            //box-shadow: 0 0.5em 1em -0.125em rgb(10 10 10 / 10%), 0 0 0 1px rgb(10 10 10 / 2%);
+            box-shadow: 0 0.3em 0.7em -0.11em #ccc, 0 0 0 0.6px #ccc;
+            background-color: rgb(61, 61, 61);
+            background-image: none;
+
+            .social-contact  {
+                top: 10px
+            }
+            img {
+                border-style: solid;
+                display: block;
+                background-color:white;
+                width: 260px;
+                box-shadow: 0 10px 30px #aaa;
+            }
+        }
+         
+    }
+}

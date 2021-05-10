@@ -1,0 +1,77 @@
+div.title {
+    &:hover {
+        animation-iteration-count: infinite;
+        animation-timing-function: ease;
+        animation-duration: 1s;
+        animation-name: growTitle;
+        animation-fill-mode: forwards;
+    }
+}
+
+.block {
+    
+    .dev {
+        display: inline-block;
+        margin-left: 4px;
+        margin-right: 4px;
+        transition: all 0.7s ease;
+    }
+
+    &:hover {
+        .dev:nth-child(1) {
+            transform: translateX(140px);
+        }
+        .dev:nth-child(2) {
+            transform: translateX(-140px);
+        }
+    }
+}
+
+
+@keyframes growTitle {
+    0% {
+        opacity: 1;
+        transform: scale(1.0)
+    }
+    50% {
+        opacity: 0.6;
+        transform: scale(1.06)
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1.0)
+    }
+}
+
+.info-text {
+    font-size: 20px;
+}
+
+.stack {
+    box-shadow: 0 0.3em 0.5em -0.1em #ccc, 0 0 0 0.3px #ccc;
+    margin-top: 20px;
+    display: grid!important;
+    grid-gap: 10px;
+    grid-template-columns: auto;
+    @media (min-width: 490px) {
+        grid-template-columns: auto auto;
+    }
+    @media (min-width: 775px) {
+        grid-template-columns: auto auto auto auto;
+    }
+    .tech { 
+        padding: 15px;
+        ul {
+            li {
+                transition: all 0.5s ease;
+                &:hover  {
+                    transform: scale(1.1);
+                }
+            }
+        }
+    }
+
+    &:hover {
+        box-shadow: 0 0.3em 0.7em -0.11em #ccc, 0 0 0 0.6px #ccc;
+    }
+}
